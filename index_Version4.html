@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOMAX LINKS - Directorio de Recursos para Nómadas Digitales</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap.386@1.0.0/dist/css/bootstrap.386.min.css">
+    <style>
+        body {
+            background-color: #c0c0c0;
+            font-family: "MS Sans Serif", sans-serif;
+            color: #000000;
+            margin: 0;
+            padding: 20px;
+            background-image: linear-gradient(45deg, #c0c0c0 25%, transparent 25%), 
+                            linear-gradient(-45deg, #c0c0c0 25%, transparent 25%), 
+                            linear-gradient(45deg, transparent 75%, #c0c0c0 75%), 
+                            linear-gradient(-45deg, transparent 75%, #c0c0c0 75%);
+            background-size: 2px 2px;
+            background-position: 0 0, 0 1px, 1px -1px, -1px 0px;
+        }
+
+        .main-window {
+            background-color: #c0c0c0;
+            border: 2px outset #c0c0c0;
+            margin: 0 auto;
+            max-width: 1200px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .title-bar {
+            background: linear-gradient(90deg, #0000ff 0%, #00007f 100%);
+            color: white;
+            padding: 4px 8px;
+            font-size: 11px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #000080;
+        }
+
+        .title-bar-controls {
+            display: flex;
+            gap: 2px;
+        }
+
+        .title-bar-controls button {
+            width: 16px;
+            height: 14px;
+            background: #c0c0c0;
+            border: 1px outset #c0c0c0;
+            font-size: 8px;
+            color: #000;
+            padding: 0;
+            margin: 0;
+        }
+
+        .title-bar-controls button:hover {
+            background: #e0e0e0;
+        }
+
+        .window-body {
+            padding: 15px;
+            background-color: #c0c0c0;
+            min-height: 600px;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #c0c0c0;
+            border: 2px inset #c0c0c0;
+        }
+
+        .header-section h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000080;
+            text-shadow: 1px 1px 0px #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 12px;
+            color: #000;
+            background-color: #ffff00;
+            padding: 5px 10px;
+            border: 1px solid #000;
+            display: inline-block;
+        }
+
+        .info-panel {
+            background-color: #ffffff;
+            border: 2px inset #c0c0c0;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-family: "Courier New", monospace;
+            font-size: 11px;
+        }
+
+        .warning-box {
+            background-color: #ffff00;
+            border: 2px solid #ff0000;
+            padding: 10px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .controls-panel {
+            background-color: #c0c0c0;
+            border: 2px inset #c0c0c0;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .search-input {
+            background-color: #ffffff;
+            border: 2px inset #c0c0c0;
+            padding: 4px 8px;
+            font-family: "MS Sans Serif", sans-serif;
+            font-size: 11px;
+            width: 200px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .filter-btn {
+            background-color: #c0c0c0;
+            border: 2px outset #c0c0c0;
+            padding: 4px 12px;
+            font-size: 11px;
+            cursor: pointer;
+            color: #000;
+        }
+
+        .filter-btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        .filter-btn.active {
+            border: 2px inset #c0c0c0;
+            background-color: #0000ff;
+            color: #ffffff;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .service-card {
+            background-color: #c0c0c0;
+            border: 2px outset #c0c0c0;
+            padding: 0;
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .service-header {
+            background: linear-gradient(90deg, #008080 0%, #004040 100%);
+            color: white;
+            padding: 4px 8px;
+            font-size: 11px;
+            font-weight: bold;
+            border-bottom: 1px solid #004040;
+        }
+
+        .service-body {
+            padding: 12px;
+            font-size: 11px;
+        }
+
+        .service-name {
+            font-weight: bold;
+            font-size: 13px;
+            color: #000080;
+            margin-bottom: 5px;
+        }
+
+        .service-description {
+            margin: 8px 0;
+            line-height: 1.4;
+        }
+
+        .service-features {
+            margin: 8px 0;
+        }
+
+        .service-features ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .service-features li {
+            margin-bottom: 2px;
+        }
+
+        .service-features li:before {
+            content: "► ";
+            color: #008000;
+            font-weight: bold;
+        }
+
+        .service-tags {
+            margin: 8px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+        }
+
+        .service-tag {
+            background-color: #ffff00;
+            border: 1px solid #000;
+            padding: 2px 6px;
+            font-size: 9px;
+            font-weight: bold;
+        }
+
+        .service-url {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .service-link {
+            background-color: #c0c0c0;
+            border: 2px outset #c0c0c0;
+            padding: 4px 12px;
+            text-decoration: none;
+            color: #000;
+            font-size: 11px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .service-link:hover {
+            background-color: #0000ff;
+            color: #ffffff;
+            text-decoration: none;
+            border: 2px inset #c0c0c0;
+        }
+
+        .status-bar {
+            background-color: #c0c0c0;
+            border-top: 1px solid #808080;
+            padding: 4px 8px;
+            font-size: 11px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .status-led {
+            width: 8px;
+            height: 8px;
+            background-color: #00ff00;
+            border: 1px solid #000;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-window {
+            background-color: #c0c0c0;
+            border: 2px outset #c0c0c0;
+            margin: 50px auto;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .modal-body {
+            padding: 15px;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        .close-btn {
+            background-color: #c0c0c0;
+            border: 2px outset #c0c0c0;
+            padding: 4px 12px;
+            float: right;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .close-btn:hover {
+            background-color: #ff0000;
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-buttons {
+                flex-direction: column;
+            }
+            
+            .search-input {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            font-size: 14px;
+            color: #808080;
+            border: 2px inset #c0c0c0;
+            background-color: #ffffff;
+        }
+
+        .category-icon {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            margin-right: 5px;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAdgAAAHYBTnsmCAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFYSURBVDiNpZM9SwNBEIafgwQLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwdJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sLwcJCG1sL');
+        }
+    </style>
+</head>
+<body>
+    <!-- Modal de Advertencia Inicial -->
+    <div id="warningModal" class="modal" style="display: block;">
+        <div class="modal-window">
+            <div class="title-bar">
+                <div class="title-bar-text">⚠️ ADVERTENCIA LEGAL - NOMAX LINKS</div>
+                <div class="title-bar-controls">
+                    <button onclick="closeWarningModal()">✕</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="warning-box">
+                    <strong>AVISO IMPORTANTE:</strong>
+                </div>
+                <p><strong>PROPÓSITO EDUCATIVO ÚNICAMENTE:</strong> Este sitio web tiene fines informativos y educativos exclusivamente. No promovemos ni facilitamos actividades ilegales.</p>
+                
+                <p><strong>DESCARGO DE RESPONSABILIDAD:</strong> NOMAX LINKS no se hace responsable por:</p>
+                <ul>
+                    <li>El uso de los servicios listados</li>
+                    <li>La veracidad de la información proporcionada por terceros</li>
+                    <li>Pérdidas financieras o problemas legales derivados del uso de estos servicios</li>
+                    <li>La disponibilidad o funcionamiento de los servicios externos</li>
+                </ul>
+
+                <p><strong>RESPONSABILIDAD DEL USUARIO:</strong> Usted es responsable de:</p>
+                <ul>
+                    <li>Cumplir con las leyes locales e internacionales</li>
+                    <li>Verificar la legitimidad de los servicios antes de usarlos</li>
+                    <li>Proteger su privacidad y seguridad digital</li>
+                    <li>Realizar su propia investigación (DYOR - Do Your Own Research)</li>
+                </ul>
+
+                <p><strong>PRIVACIDAD Y SEGURIDAD:</strong> Los servicios listados pueden variar en sus políticas de privacidad. Siempre revise los términos de servicio antes de usar cualquier plataforma.</p>
+                
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="close-btn" onclick="closeWarningModal()">ENTENDIDO - CONTINUAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ventana Principal -->
+    <div class="main-window">
+        <div class="title-bar">
+            <div class="title-bar-text">🖥️ NOMAX LINKS - Recursos para Nómadas Digitales Sin KYC</div>
+            <div class="title-bar-controls">
+                <button onclick="showAboutModal()">?</button>
+                <button>□</button>
+                <button>✕</button>
+            </div>
+        </div>
+        
+        <div class="window-body">
+            <!-- Header -->
+            <div class="header-section">
+                <h1>NOMAX LINKS</h1>
+                <div class="subtitle">DIRECTORIO DE RECURSOS SIN KYC PARA NÓMADAS DIGITALES</div>
+            </div>
+
+            <!-- Panel Informativo -->
+            <div class="info-panel">
+                <h3>¿QUÉ ES KYC Y POR QUÉ EVITARLO?</h3>
+                <p><strong>KYC (Know Your Customer)</strong> son procedimientos obligatorios que requieren identificación personal para acceder a servicios financieros.</p>
+                
+                <p><strong>Problemas del KYC:</strong></p>
+                <p>► Violación de la privacidad financiera personal<br>
+                   ► Riesgo de filtración de datos personales<br>
+                   ► Censura y bloqueo de cuentas por motivos políticos<br>
+                   ► Control gubernamental excesivo sobre las finanzas<br>
+                   ► Exclusión de personas sin documentación formal</p>
+
+                <p><strong>Ventajas de servicios Sin KYC:</strong></p>
+                <p>► Privacidad y anonimato financiero<br>
+                   ► Acceso global sin restricciones geográficas<br>
+                   ► Autonomía total sobre tus fondos<br>
+                   ► Resistencia a la censura<br>
+                   ► Inclusión financiera universal</p>
+
+                <div class="warning-box">
+                    ⚠️ IMPORTANTE: Usa estos servicios responsablemente y cumple con las leyes locales de tu jurisdicción.
+                </div>
+            </div>
+
+            <!-- Panel de Controles -->
+            <div class="controls-panel">
+                <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                    <label for="searchInput" style="font-weight: bold;">Buscar:</label>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Nombre del servicio..." onkeyup="filterServices()">
+                    
+                    <label style="font-weight: bold; margin-left: 20px;">Filtrar por categoría:</label>
+                </div>
+                
+                <div class="filter-buttons" id="categoryFilters">
+                    <button class="filter-btn active" onclick="filterByCategory('all')">📁 TODOS</button>
+                    <button class="filter-btn" onclick="filterByCategory('Privacy')">🔒 PRIVACIDAD</button>
+                    <button class="filter-btn" onclick="filterByCategory('Exchange')">💱 EXCHANGES</button>
+                    <button class="filter-btn" onclick="filterByCategory('P2P')">🤝 P2P</button>
+                    <button class="filter-btn" onclick="filterByCategory('Business')">💼 NEGOCIOS</button>
+                    <button class="filter-btn" onclick="filterByCategory('Travel')">✈️ VIAJES</button>
+                    <button class="filter-btn" onclick="filterByCategory('Education')">📚 EDUCACIÓN</button>
+                    <button class="filter-btn" onclick="filterByCategory('Social')">👥 SOCIAL</button>
+                    <button class="filter-btn" onclick="filterByCategory('Nostr')">🟣 NOSTR</button>
+                </div>
+            </div>
+
+            <!-- Grid de Servicios -->
+            <div class="services-grid" id="servicesGrid">
+                <!-- Los servicios se cargarán aquí dinámicamente -->
+            </div>
+
+            <!-- Mensaje de No Resultados -->
+            <div id="noResults" class="no-results" style="display: none;">
+                <h3>No se encontraron servicios</h3>
+                <p>Intenta con otros términos de búsqueda o cambia los filtros.</p>
+            </div>
+        </div>
+
+        <!-- Barra de Estado -->
+        <div class="status-bar">
+            <div>
+                <span class="status-led"></span>
+                <span id="serviceCount">Cargando servicios...</span>
+            </div>
+            <div id="currentTime"></div>
+        </div>
+    </div>
+
+    <!-- Modal Acerca De -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-window">
+            <div class="title-bar">
+                <div class="title-bar-text">ℹ️ Acerca de NOMAX LINKS</div>
+                <div class="title-bar-controls">
+                    <button onclick="closeAboutModal()">✕</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <h3>NOMAX LINKS v1.0</h3>
+                <p><strong>Desarrollado por:</strong> Comunidad NOMAX</p>
+                <p><strong>Propósito:</strong> Directorio educativo de servicios que respetan la privacidad financiera</p>
+                
+                <h4>🎯 Misión</h4>
+                <p>Promover la educación sobre herramientas financieras descentralizadas y respetuosas con la privacidad para nómadas digitales y usuarios que valoran su autonomía financiera.</p>
+                
+                <h4>🛠️ Tecnología</h4>
+                <p>► HTML5 + CSS3 + JavaScript Vanilla<br>
+                   ► Framework Bootstrap.386 para estética retro<br>
+                   ► Diseño responsive y accesible<br>
+                   ► Sin tracking ni cookies</p>
+                
+                <h4>📊 Estadísticas</h4>
+                <p>► Más de 80 servicios catalogados<br>
+                   ► 9 categorías diferentes<br>
+                   ► Actualización continua de la comunidad</p>
+                
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="close-btn" onclick="closeAboutModal()">CERRAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let servicesDatabase = [];
+        let currentFilter = 'all';
+        let currentServices = [];
+
+        function initializeApp() {
+            fetch('services.json')
+                .then(res => res.json())
+                .then(data => {
+                    servicesDatabase = data;
+                    currentServices = data;
+                    renderServices(servicesDatabase);
+                    updateServiceCount(servicesDatabase.length);
+                })
+                .catch(() => {
+                    document.getElementById('servicesGrid').innerHTML = '<div class="no-results">Error al cargar los servicios.</div>';
+                    updateServiceCount(0);
+                });
+
+            updateClock();
+            setInterval(updateClock, 1000);
+        }
+
+        function renderServices(services) {
+            const grid = document.getElementById('servicesGrid');
+            const noResults = document.getElementById('noResults');
+            
+            if (services.length === 0) {
+                grid.style.display = 'none';
+                noResults.style.display = 'block';
+                return;
+            }
+            
+            grid.style.display = 'grid';
+            noResults.style.display = 'none';
+            
+            grid.innerHTML = services.map(service => `
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="category-icon"></span>
+                        ${service.category.toUpperCase()}
+                    </div>
+                    <div class="service-body">
+                        <div class="service-name">${service.name}</div>
+                        <div class="service-description">${service.description}</div>
+                        
+                        <div class="service-features">
+                            <strong>Características:</strong>
+                            <ul>
+                                ${service.features.map(feature => `<li>${feature}</li>`).join('')}
+                            </ul>
+                        </div>
+                        
+                        <div class="service-tags">
+                            ${service.tags.map(tag => `<span class="service-tag">${tag}</span>`).join('')}
+                        </div>
+                        
+                        <div class="service-url">
+                            <a href="${service.url}" target="_blank" class="service-link">
+                                🌐 VISITAR SITIO
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterServices() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            let filtered = servicesDatabase;
+            
+            if (currentFilter !== 'all') {
+                filtered = filtered.filter(service => service.category === currentFilter);
+            }
+            
+            if (searchTerm) {
+                filtered = filtered.filter(service => 
+                    service.name.toLowerCase().includes(searchTerm) ||
+                    service.description.toLowerCase().includes(searchTerm) ||
+                    service.tags.some(tag => tag.toLowerCase().includes(searchTerm))
+                );
+            }
+            
+            currentServices = filtered;
+            renderServices(filtered);
+            updateServiceCount(filtered.length);
+        }
+
+        function filterByCategory(category) {
+            currentFilter = category;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            filterServices();
+        }
+
+        function updateServiceCount(count) {
+            const total = servicesDatabase.length;
+            document.getElementById('serviceCount').innerHTML = 
+                `<span class="status-led"></span>Mostrando ${count} de ${total} servicios`;
+        }
+
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('es-ES', { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            document.getElementById('currentTime').textContent = timeString;
+        }
+
+        function closeWarningModal() {
+            document.getElementById('warningModal').style.display = 'none';
+        }
+        function showAboutModal() {
+            document.getElementById('aboutModal').style.display = 'block';
+        }
+        function closeAboutModal() {
+            document.getElementById('aboutModal').style.display = 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', initializeApp);
+
+        window.onclick = function(event) {
+            const warningModal = document.getElementById('warningModal');
+            const aboutModal = document.getElementById('aboutModal');
+            if (event.target === warningModal) {
+                warningModal.style.display = 'none';
+            }
+            if (event.target === aboutModal) {
+                aboutModal.style.display = 'none';
+            }
+        }
+
+        // Konami code & sonidos: igual que antes
+        let konamiCode = [];
+        const konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+        document.addEventListener('keydown', function(e) {
+            konamiCode.push(e.keyCode);
+            konamiCode = konamiCode.slice(-10);
+            if (konamiCode.join(',') === konamiSequence.join(',')) {
+                document.body.style.background = '#000';
+                document.body.style.color = '#00ff00';
+                alert('🎉 ¡Código Konami activado! Modo Matrix ON');
+                setTimeout(() => {
+                    location.reload();
+                }, 5000);
+            }
+        });
+
+        function playClickSound() {
+            const audio = new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrAK');
+            audio.volume = 0.1;
+            audio.play().catch(() => {});
+        }
+
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('filter-btn') || 
+                e.target.classList.contains('service-link') ||
+                e.target.classList.contains('close-btn')) {
+                playClickSound();
+            }
+        });
+    </script>
+</body>
+</html>

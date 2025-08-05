@@ -1,0 +1,802 @@
+[
+  {
+    "id": 1,
+    "name": "Mullvad VPN",
+    "category": "Privacy",
+    "description": "Servicio VPN enfocado en la privacidad y seguridad. No requiere información personal para el registro.",
+    "features": ["Sin logs", "Acepta crypto", "Código abierto", "Tor compatible"],
+    "url": "https://mullvad.net/es",
+    "tags": ["vpn", "privacidad", "anonimato"],
+    "status": "active"
+  },
+  {
+    "id": 2,
+    "name": "IVPN",
+    "category": "Privacy",
+    "description": "Servicio VPN que ofrece múltiples protocolos de seguridad sin requerir datos personales.",
+    "features": ["WireGuard", "Sin logs", "Multi-hop", "Acepta Bitcoin"],
+    "url": "https://ivpn.net/es",
+    "tags": ["vpn", "seguridad", "bitcoin"],
+    "status": "active"
+  },
+  {
+    "id": 3,
+    "name": "Tuta Mail",
+    "category": "Privacy",
+    "description": "Servicio de correo electrónico encriptado de extremo a extremo con sede en Alemania.",
+    "features": ["E2E encryption", "Sin anuncios", "Código abierto", "Calendario incluido"],
+    "url": "https://tuta.com",
+    "tags": ["email", "encriptacion", "privacidad"],
+    "status": "active"
+  },
+  {
+    "id": 4,
+    "name": "Proton",
+    "category": "Privacy",
+    "description": "Suite completa de servicios con enfoque en privacidad: correo, VPN, calendario, drive.",
+    "features": ["E2E encryption", "Sede en Suiza", "Código abierto", "Suite completa"],
+    "url": "https://proton.me",
+    "tags": ["email", "vpn", "suite", "privacidad"],
+    "status": "active"
+  },
+  {
+    "id": 5,
+    "name": "Tor Browser",
+    "category": "Privacy",
+    "description": "Navegador que protege tu privacidad y te defiende de la censura usando la red Tor.",
+    "features": ["Anonimato", "Anti-censura", "Código abierto", "Gratuito"],
+    "url": "https://torproject.org",
+    "tags": ["navegador", "anonimato", "tor"],
+    "status": "active"
+  },
+  {
+    "id": 6,
+    "name": "Brave Browser",
+    "category": "Privacy",
+    "description": "Navegador web que bloquea anuncios y rastreadores por defecto.",
+    "features": ["Bloqueo anuncios", "BAT rewards", "Tor integrado", "Open source"],
+    "url": "https://brave.com",
+    "tags": ["navegador", "privacidad", "crypto"],
+    "status": "active"
+  },
+  {
+    "id": 7,
+    "name": "GrapheneOS",
+    "category": "Privacy",
+    "description": "Sistema operativo móvil con enfoque en privacidad y seguridad para dispositivos Pixel.",
+    "features": ["Hardened Android", "Sin Google", "Código abierto", "Actualizaciones"],
+    "url": "https://grapheneos.org",
+    "tags": ["mobile", "android", "seguridad"],
+    "status": "active"
+  },
+  {
+    "id": 8,
+    "name": "CalyxOS",
+    "category": "Privacy",
+    "description": "Sistema operativo móvil basado en Android con enfoque en seguridad y privacidad.",
+    "features": ["DeGoogled", "F-Droid", "VPN incluida", "Código abierto"],
+    "url": "https://calyxos.org",
+    "tags": ["mobile", "android", "privacidad"],
+    "status": "active"
+  },
+  {
+    "id": 9,
+    "name": "SimpleX Chat",
+    "category": "Privacy",
+    "description": "Mensajería privada sin identificadores de usuario, completamente descentralizada.",
+    "features": ["Sin IDs", "E2E encryption", "Código abierto", "Sin servidores"],
+    "url": "https://simplex.chat",
+    "tags": ["chat", "mensajeria", "privacidad"],
+    "status": "active"
+  },
+  {
+    "id": 10,
+    "name": "Session",
+    "category": "Privacy",
+    "description": "App de mensajería privada y anónima basada en la red descentralizada Loki.",
+    "features": ["Sin número teléfono", "Onion routing", "Código abierto", "Sin metadatos"],
+    "url": "https://getsession.org",
+    "tags": ["chat", "anonimato", "descentralizado"],
+    "status": "active"
+  },
+  {
+    "id": 11,
+    "name": "Bisq",
+    "category": "Exchange",
+    "description": "Exchange P2P descentralizado para comprar y vender Bitcoin sin KYC.",
+    "features": ["Descentralizado", "P2P", "Sin custodia", "Código abierto"],
+    "url": "https://bisq.network",
+    "tags": ["bitcoin", "p2p", "descentralizado"],
+    "status": "active"
+  },
+  {
+    "id": 12,
+    "name": "RoboSats",
+    "category": "Exchange",
+    "description": "Plataforma P2P para intercambiar Bitcoin usando Lightning Network con completo anonimato.",
+    "features": ["Lightning Network", "Tor nativo", "Sin KYC", "Robot avatars"],
+    "url": "https://learn.robosats.org",
+    "tags": ["bitcoin", "lightning", "p2p"],
+    "status": "active"
+  },
+  {
+    "id": 13,
+    "name": "Hodl Hodl",
+    "category": "Exchange",
+    "description": "Plataforma de intercambio P2P sin custodia que conecta compradores y vendedores.",
+    "features": ["Sin custodia", "P2P", "Multisig", "KYC opcional"],
+    "url": "https://hodlhodl.com",
+    "tags": ["bitcoin", "p2p", "multisig"],
+    "status": "active"
+  },
+  {
+    "id": 14,
+    "name": "Peach Bitcoin",
+    "category": "Exchange",
+    "description": "App móvil para intercambio P2P de Bitcoin con enfoque en Europa.",
+    "features": ["App móvil", "P2P", "Sin KYC", "Europa focus"],
+    "url": "https://peachbitcoin.com/es",
+    "tags": ["bitcoin", "mobile", "europa"],
+    "status": "active"
+  },
+  {
+    "id": 15,
+    "name": "Boltz Exchange",
+    "category": "Exchange",
+    "description": "Servicio de atomic swaps entre Bitcoin on-chain y Lightning Network.",
+    "features": ["Atomic swaps", "Lightning ⚡", "Sin registro", "Código abierto"],
+    "url": "https://boltz.exchange",
+    "tags": ["bitcoin", "lightning", "swaps"],
+    "status": "active"
+  },
+  {
+    "id": 16,
+    "name": "Plebeian Market",
+    "category": "P2P",
+    "description": "Mercado P2P para productos y servicios que acepta Bitcoin como pago.",
+    "features": ["Bitcoin only", "P2P", "Sin intermediarios", "Global"],
+    "url": "https://plebeian.market",
+    "tags": ["marketplace", "bitcoin", "p2p"],
+    "status": "active"
+  },
+  {
+    "id": 17,
+    "name": "Shopstr",
+    "category": "P2P",
+    "description": "Plataforma descentralizada para comprar y vender productos usando Bitcoin y Nostr.",
+    "features": ["Nostr protocol", "Bitcoin", "Descentralizado", "Sin censura"],
+    "url": "https://shopstr.store",
+    "tags": ["marketplace", "nostr", "bitcoin"],
+    "status": "active"
+  },
+  {
+    "id": 18,
+    "name": "Bitrefill",
+    "category": "P2P",
+    "description": "Compra tarjetas de regalo, recargas móviles y servicios con criptomonedas.",
+    "features": ["Gift cards", "Recargas móviles", "Lightning ⚡", "Global"],
+    "url": "https://bitrefill.com",
+    "tags": ["giftcards", "bitcoin", "lightning"],
+    "status": "active"
+  },
+  {
+    "id": 19,
+    "name": "Coinsbee",
+    "category": "P2P",
+    "description": "Plataforma para comprar tarjetas de regalo de cientos de marcas con criptomonedas.",
+    "features": ["500+ marcas", "Multi-crypto", "Digital delivery", "Sin registro"],
+    "url": "https://coinsbee.com/es",
+    "tags": ["giftcards", "crypto", "shopping"],
+    "status": "active"
+  },
+  {
+    "id": 20,
+    "name": "BTCPay Server",
+    "category": "Business",
+    "description": "Procesador de pagos Bitcoin de código abierto para comerciantes.",
+    "features": ["Self-hosted", "Sin custodia", "Lightning ⚡", "Código abierto"],
+    "url": "https://btcpayserver.org",
+    "tags": ["payments", "merchant", "bitcoin"],
+    "status": "active"
+  },
+  {
+    "id": 21,
+    "name": "Strike",
+    "category": "Business",
+    "description": "App para enviar y recibir dinero usando Bitcoin y Lightning Network.",
+    "features": ["Lightning ⚡", "Fiat on/off", "Instant", "Low fees"],
+    "url": "https://strike.me/es",
+    "tags": ["payments", "lightning", "fiat"],
+    "status": "active"
+  },
+  {
+    "id": 22,
+    "name": "Bitwage",
+    "category": "Business",
+    "description": "Plataforma para recibir salarios en Bitcoin y otras criptomonedas.",
+    "features": ["Payroll", "Bitcoin salary", "Global", "Freelancers"],
+    "url": "https://bitwage.com",
+    "tags": ["salary", "bitcoin", "freelance"],
+    "status": "active"
+  },
+  {
+    "id": 23,
+    "name": "Remote OK",
+    "category": "Business",
+    "description": "Portal de trabajo remoto con miles de ofertas para nómadas digitales.",
+    "features": ["Remote jobs", "Tech focus", "Global", "No location bias"],
+    "url": "https://remoteok.com",
+    "tags": ["jobs", "remote", "tech"],
+    "status": "active"
+  },
+  {
+    "id": 24,
+    "name": "Bitcoiner Jobs",
+    "category": "Business",
+    "description": "Plataforma de empleo especializada en trabajos relacionados con Bitcoin.",
+    "features": ["Bitcoin jobs", "Crypto industry", "Remote", "Full-time"],
+    "url": "https://bitcoinerjobs.com",
+    "tags": ["jobs", "bitcoin", "crypto"],
+    "status": "active"
+  },
+  {
+    "id": 25,
+    "name": "SafetyWing",
+    "category": "Business",
+    "description": "Seguro de viaje y salud diseñado específicamente para nómadas digitales.",
+    "features": ["Nomad insurance", "Global coverage", "Monthly plans", "Affordable"],
+    "url": "https://safetywing.com",
+    "tags": ["insurance", "nomad", "travel"],
+    "status": "active"
+  },
+  {
+    "id": 26,
+    "name": "Travala",
+    "category": "Travel",
+    "description": "Plataforma de viajes que acepta más de 40 criptomonedas para hoteles y vuelos.",
+    "features": ["40+ cryptos", "Hotels & flights", "Rewards", "Global"],
+    "url": "https://travala.com",
+    "tags": ["travel", "crypto", "hotels"],
+    "status": "active"
+  },
+  {
+    "id": 27,
+    "name": "AirBTC",
+    "category": "Travel",
+    "description": "Plataforma para comprar vuelos con Bitcoin de manera privada.",
+    "features": ["Bitcoin flights", "No KYC", "Global routes", "Private"],
+    "url": "https://airbtc.online",
+    "tags": ["flights", "bitcoin", "travel"],
+    "status": "active"
+  },
+  {
+    "id": 28,
+    "name": "Silent Link",
+    "category": "Travel",
+    "description": "Servicio de eSIM anónima para viajeros que valoran su privacidad.",
+    "features": ["Anonymous eSIM", "Global coverage", "Bitcoin payment", "No KYC"],
+    "url": "https://silent.link",
+    "tags": ["esim", "travel", "privacy"],
+    "status": "active"
+  },
+  {
+    "id": 29,
+    "name": "Stacker News",
+    "category": "Education",
+    "description": "Comunidad de noticias y discusiones sobre Bitcoin con sistema de recompensas Lightning.",
+    "features": ["Bitcoin news", "Lightning tips", "Community", "Learning"],
+    "url": "https://stacker.news",
+    "tags": ["news", "bitcoin", "community"],
+    "status": "active"
+  },
+  {
+    "id": 30,
+    "name": "Bitcoin TV",
+    "category": "Education",
+    "description": "Portal de videos educativos sobre Bitcoin y tecnologías relacionadas.",
+    "features": ["Video content", "Educational", "Bitcoin focus", "Free"],
+    "url": "https://bitcointv.com",
+    "tags": ["videos", "education", "bitcoin"],
+    "status": "active"
+  },
+  {
+    "id": 31,
+    "name": "Vivir es Aprender",
+    "category": "Education",
+    "description": "Recursos y materiales para la educación en casa (homeschooling) en español.",
+    "features": ["Homeschool", "Español", "Recursos gratuitos", "Familias"],
+    "url": "https://viviresaprender.com",
+    "tags": ["homeschool", "español", "education"],
+    "status": "active"
+  },
+  {
+    "id": 32,
+    "name": "We are Worldschoolers",
+    "category": "Education",
+    "description": "Comunidad global de familias que viajan y educan a sus hijos en el camino.",
+    "features": ["Worldschool", "Travel families", "Community", "Resources"],
+    "url": "https://weareworldschoolers.org",
+    "tags": ["worldschool", "travel", "families"],
+    "status": "active"
+  },
+  {
+    "id": 33,
+    "name": "Jitsi Meet",
+    "category": "Social",
+    "description": "Plataforma de videoconferencias segura y de código abierto sin registro.",
+    "features": ["Open source", "Sin registro", "E2E encryption", "Web-based"],
+    "url": "https://jitsi.org",
+    "tags": ["video", "meetings", "opensource"],
+    "status": "active"
+  },
+  {
+    "id": 34,
+    "name": "No Max Community",
+    "category": "Social",
+    "description": "Comunidad de nómadas digitales enfocada en libertad financiera y Bitcoin.",
+    "features": ["Nomad community", "Bitcoin focus", "Freedom", "Travel"],
+    "url": "https://nomax.community",
+    "tags": ["community", "nomad", "bitcoin"],
+    "status": "active"
+  },
+  {
+    "id": 35,
+    "name": "Nostr Protocol",
+    "category": "Nostr",
+    "description": "Protocolo simple y descentralizado para redes sociales resistente a la censura.",
+    "features": ["Descentralizado", "Censorship resistant", "Open protocol", "Lightning tips"],
+    "url": "https://nostr.com",
+    "tags": ["protocol", "social", "descentralized"],
+    "status": "active"
+  },
+  {
+    "id": 36,
+    "name": "KeePassXC",
+    "category": "Privacy",
+    "description": "Gestor de contraseñas de código abierto multiplataforma.",
+    "features": ["Código abierto", "Local storage", "Cross-platform", "Sin cloud"],
+    "url": "https://keepassxc.org",
+    "tags": ["passwords", "security", "opensource"],
+    "status": "active"
+  },
+  {
+    "id": 37,
+    "name": "Bitwarden",
+    "category": "Privacy",
+    "description": "Gestor de contraseñas gratuito de código abierto con opciones de autohosting.",
+    "features": ["Open source", "Self-host option", "Multi-device", "Freemium"],
+    "url": "https://bitwarden.com",
+    "tags": ["passwords", "security", "selfhost"],
+    "status": "active"
+  },
+  {
+    "id": 38,
+    "name": "Standard Notes",
+    "category": "Privacy",
+    "description": "Aplicación de notas encriptadas de extremo a extremo.",
+    "features": ["E2E encryption", "Cross-platform", "Markdown", "Extensions"],
+    "url": "https://standardnotes.com",
+    "tags": ["notes", "encryption", "productivity"],
+    "status": "active"
+  },
+  {
+    "id": 39,
+    "name": "DuckDuckGo",
+    "category": "Privacy",
+    "description": "Motor de búsqueda que no rastrea usuarios ni almacena información personal.",
+    "features": ["Sin tracking", "Sin logs", "Privacy first", "Instant answers"],
+    "url": "https://duckduckgo.com",
+    "tags": ["search", "privacy", "notracking"],
+    "status": "active"
+  },
+  {
+    "id": 40,
+    "name": "Tails OS",
+    "category": "Privacy",
+    "description": "Sistema operativo portátil que protege privacidad y anonimato.",
+    "features": ["Live OS", "Tor by default", "Amnesia", "Portable"],
+    "url": "https://tails.net",
+    "tags": ["os", "tor", "privacy"],
+    "status": "active"
+  },
+  {
+    "id": 41,
+    "name": "OpenNode",
+    "category": "Business",
+    "description": "Pasarela de pagos empresarial para Bitcoin y Lightning Network.",
+    "features": ["Payment gateway", "Lightning ⚡", "API", "Business tools"],
+    "url": "https://opennode.com",
+    "tags": ["payments", "business", "lightning"],
+    "status": "active"
+  },
+  {
+    "id": 42,
+    "name": "LN Markets",
+    "category": "Business",
+    "description": "Plataforma de trading de derivados Bitcoin usando Lightning Network.",
+    "features": ["Lightning ⚡", "Derivatives", "No KYC", "Fast deposits"],
+    "url": "https://lnmarkets.com",
+    "tags": ["trading", "lightning", "derivatives"],
+    "status": "active"
+  },
+  {
+    "id": 43,
+    "name": "CoinGecko",
+    "category": "Business",
+    "description": "Plataforma de información sobre precios y mercados de criptomonedas.",
+    "features": ["Price tracking", "Market data", "Free API", "Portfolio"],
+    "url": "https://coingecko.com/es",
+    "tags": ["prices", "data", "crypto"],
+    "status": "active"
+  },
+  {
+    "id": 44,
+    "name": "Fountain FM",
+    "category": "Business",
+    "description": "App de podcasts que permite micropagos a creadores con Bitcoin.",
+    "features": ["Podcasts", "Bitcoin streaming", "Micropayments", "Value4Value"],
+    "url": "https://fountain.fm",
+    "tags": ["podcasts", "bitcoin", "streaming"],
+    "status": "active"
+  },
+  {
+    "id": 45,
+    "name": "BTC Map",
+    "category": "Business",
+    "description": "Mapa colaborativo de establecimientos que aceptan Bitcoin.",
+    "features": ["Bitcoin merchants", "Global map", "Community driven", "Mobile app"],
+    "url": "https://btcmap.org",
+    "tags": ["map", "merchants", "bitcoin"],
+    "status": "active"
+  },
+  {
+    "id": 46,
+    "name": "BTC Events Map",
+    "category": "Travel",
+    "description": "Mapa de meetups, conferencias y eventos relacionados con Bitcoin.",
+    "features": ["Bitcoin events", "Global map", "Meetups", "Conferences"],
+    "url": "https://btceventsmap.com",
+    "tags": ["events", "bitcoin", "meetups"],
+    "status": "active"
+  },
+  {
+    "id": 47,
+    "name": "Aegis Authenticator",
+    "category": "Privacy",
+    "description": "App de autenticación 2FA de código abierto para Android.",
+    "features": ["2FA", "Open source", "Backup", "No cloud"],
+    "url": "https://getaegis.app",
+    "tags": ["2fa", "security", "android"],
+    "status": "active"
+  },
+  {
+    "id": 48,
+    "name": "Matrix Protocol",
+    "category": "Privacy",
+    "description": "Protocolo de comunicación descentralizado y encriptado.",
+    "features": ["Descentralizado", "E2E encryption", "Federation", "Open source"],
+    "url": "https://matrix.org",
+    "tags": ["chat", "protocol", "decentralized"],
+    "status": "active"
+  },
+  {
+    "id": 49,
+    "name": "Keet",
+    "category": "Privacy",
+    "description": "Plataforma P2P para mensajería y videollamadas sin servidores.",
+    "features": ["P2P", "Sin servidores", "Video calls", "File sharing"],
+    "url": "https://keet.io",
+    "tags": ["p2p", "video", "chat"],
+    "status": "active"
+  },
+  {
+    "id": 50,
+    "name": "Organic Maps",
+    "category": "Privacy",
+    "description": "Aplicación de mapas offline de código abierto basada en OpenStreetMap.",
+    "features": ["Offline maps", "No tracking", "Open source", "OpenStreetMap"],
+    "url": "https://organicmaps.app",
+    "tags": ["maps", "offline", "privacy"],
+    "status": "active"
+  },
+  {
+    "id": 51,
+    "name": "Mostro Network",
+    "category": "Exchange",
+    "description": "Red P2P descentralizada para intercambio de Bitcoin usando Nostr.",
+    "features": ["Nostr based", "P2P", "Descentralizado", "Sin custodia"],
+    "url": "https://mostro.network",
+    "tags": ["nostr", "p2p", "bitcoin"],
+    "status": "active"
+  },
+  {
+    "id": 52,
+    "name": "Sideswap",
+    "category": "Exchange",
+    "description": "Wallet e intercambio no-custodial con soporte para Liquid Network.",
+    "features": ["Non-custodial", "Liquid Network", "Privacy", "Mobile wallet"],
+    "url": "https://sideswap.io",
+    "tags": ["wallet", "liquid", "privacy"],
+    "status": "active"
+  },
+  {
+    "id": 53,
+    "name": "LibreTranslate",
+    "category": "Education",
+    "description": "Servicio de traducción de código abierto que respeta la privacidad.",
+    "features": ["Open source", "Sin tracking", "API libre", "Offline option"],
+    "url": "https://es.libretranslate.com",
+    "tags": ["translation", "opensource", "privacy"],
+    "status": "active"
+  },
+  {
+    "id": 54,
+    "name": "Cryptpad",
+    "category": "Privacy",
+    "description": "Suite de productividad colaborativa con encriptación de extremo a extremo.",
+    "features": ["E2E encryption", "Collaborative", "No account needed", "Open source"],
+    "url": "https://cryptpad.fr",
+    "tags": ["productivity", "collaboration", "encryption"],
+    "status": "active"
+  },
+  {
+    "id": 55,
+    "name": "Whonix",
+    "category": "Privacy",
+    "description": "Sistema operativo que utiliza Tor para máxima privacidad y anonimato.",
+    "features": ["Tor by design", "VM based", "Maximum privacy", "Open source"],
+    "url": "https://whonix.org",
+    "tags": ["os", "tor", "virtualization"],
+    "status": "active"
+  },
+  {
+    "id": 56,
+    "name": "Qubes OS",
+    "category": "Privacy",
+    "description": "Sistema operativo que utiliza virtualización para seguridad por aislamiento.",
+    "features": ["Security by isolation", "VM based", "Compartmentalization", "Advanced"],
+    "url": "https://qubes-os.org",
+    "tags": ["os", "security", "isolation"],
+    "status": "active"
+  },
+  {
+    "id": 57,
+    "name": "Geyser Fund",
+    "category": "Business",
+    "description": "Plataforma de crowdfunding para proyectos Bitcoin y Lightning.",
+    "features": ["Bitcoin crowdfunding", "Lightning ⚡", "Project funding", "Community"],
+    "url": "https://geyser.fund",
+    "tags": ["crowdfunding", "bitcoin", "projects"],
+    "status": "active"
+  },
+  {
+    "id": 58,
+    "name": "Wavlake",
+    "category": "Business",
+    "description": "Plataforma musical donde los oyentes pueden pagar directamente a artistas.",
+    "features": ["Music streaming", "Bitcoin payments", "Artist support", "Value4Value"],
+    "url": "https://wavlake.com",
+    "tags": ["music", "bitcoin", "streaming"],
+    "status": "active"
+  },
+  {
+    "id": 59,
+    "name": "Legacy Online School",
+    "category": "Education",
+    "description": "Escuela en línea acreditada para familias que buscan educación flexible.",
+    "features": ["Accredited", "K-12", "Flexible", "Global"],
+    "url": "https://legacyonlineschool.com",
+    "tags": ["online school", "k12", "accredited"],
+    "status": "active"
+  },
+  {
+    "id": 60,
+    "name": "Planeta Worldschool",
+    "category": "Education",
+    "description": "Comunidad y recursos para familias que viajan y educan en casa.",
+    "features": ["Worldschool", "Spanish community", "Travel education", "Resources"],
+    "url": "https://planetaworldschool.com",
+    "tags": ["worldschool", "spanish", "travel"],
+    "status": "active"
+  },
+  {
+    "id": 61,
+    "name": "DeepL",
+    "category": "Privacy",
+    "description": "Servicio de traducción con alta precisión y opciones de privacidad.",
+    "features": ["High accuracy", "Privacy options", "API", "Multiple languages"],
+    "url": "https://deepl.com",
+    "tags": ["translation", "accuracy", "privacy"],
+    "status": "active"
+  },
+  {
+    "id": 62,
+    "name": "uBlock Origin",
+    "category": "Privacy",
+    "description": "Extension de navegador para bloquear contenido, anuncios y rastreadores.",
+    "features": ["Ad blocker", "Open source", "Lightweight", "Privacy protection"],
+    "url": "https://ublockorigin.com",
+    "tags": ["adblock", "browser", "privacy"],
+    "status": "active"
+  },
+  {
+    "id": 63,
+    "name": "Insured Nomads",
+    "category": "Business",
+    "description": "Seguros de salud y viaje especializados para nómadas digitales.",
+    "features": ["Nomad focused", "Global coverage", "Flexible plans", "Travel insurance"],
+    "url": "https://insurednomads.com",
+    "tags": ["insurance", "nomad", "health"],
+    "status": "active"
+  },
+  {
+    "id": 64,
+    "name": "Authy",
+    "category": "Privacy",
+    "description": "Aplicación de autenticación de dos factores con backup en la nube.",
+    "features": ["2FA", "Cloud backup", "Multi-device", "Easy setup"],
+    "url": "https://authy.com",
+    "tags": ["2fa", "security", "backup"],
+    "status": "active"
+  },
+  {
+    "id": 65,
+    "name": "FlyFairly",
+    "category": "Travel",
+    "description": "Plataforma para reservar vuelos sin comisiones ocultas.",
+    "features": ["No hidden fees", "Transparent pricing", "Flight booking", "Fair pricing"],
+    "url": "https://flyfairly.com",
+    "tags": ["flights", "fair pricing", "transparent"],
+    "status": "active"
+  },
+  {
+    "id": 66,
+    "name": "Yubico",
+    "category": "Privacy",
+    "description": "Dispositivos de seguridad hardware para autenticación de dos factores.",
+    "features": ["Hardware 2FA", "FIDO2", "WebAuthn", "Enterprise grade"],
+    "url": "https://yubico.com",
+    "tags": ["hardware", "2fa", "security"],
+    "status": "active"
+  },
+  {
+    "id": 67,
+    "name": "FreeOTP",
+    "category": "Privacy",
+    "description": "Aplicación de autenticación 2FA de código abierto sin dependencias.",
+    "features": ["Open source", "No dependencies", "2FA", "Simple"],
+    "url": "https://github.com/freeotp",
+    "tags": ["2fa", "opensource", "simple"],
+    "status": "active"
+  },
+  {
+    "id": 68,
+    "name": "CTemplar",
+    "category": "Privacy",
+    "description": "Servicio de correo electrónico encriptado con sede en Islandia.",
+    "features": ["E2E encryption", "Iceland based", "Anonymous", "Secure"],
+    "url": "https://ctemplar.com",
+    "tags": ["email", "encryption", "iceland"],
+    "status": "active"
+  },
+  {
+    "id": 69,
+    "name": "Holepunch",
+    "category": "Privacy",
+    "description": "Plataforma para crear aplicaciones P2P sin servidores.",
+    "features": ["P2P platform", "Serverless", "Developer tools", "Decentralized"],
+    "url": "https://holepunch.to",
+    "tags": ["p2p", "development", "serverless"],
+    "status": "active"
+  },
+  {
+    "id": 70,
+    "name": "Tallycoin",
+    "category": "Business",
+    "description": "Plataforma de recaudación de fondos y donaciones con Bitcoin.",
+    "features": ["Bitcoin donations", "Crowdfunding", "Lightning ⚡", "Simple setup"],
+    "url": "https://coincharge.io/en/tallycoin",
+    "tags": ["donations", "bitcoin", "crowdfunding"],
+    "status": "active"
+  },
+  {
+    "id": 71,
+    "name": "Zapplanner",
+    "category": "Business",
+    "description": "Herramienta para gestionar y planificar pagos con Lightning Network.",
+    "features": ["Lightning ⚡", "Payment planning", "Automation", "Business tools"],
+    "url": "https://zapplanner.albylabs.com",
+    "tags": ["lightning", "planning", "business"],
+    "status": "active"
+  },
+  {
+    "id": 72,
+    "name": "Mediquo",
+    "category": "Business",
+    "description": "Plataforma de telemedicina para consultas médicas en línea.",
+    "features": ["Telemedicine", "Online consultations", "Medical chat", "Health"],
+    "url": "https://mediquo.com",
+    "tags": ["health", "telemedicine", "online"],
+    "status": "active"
+  },
+  {
+    "id": 73,
+    "name": "Doktor24",
+    "category": "Business",
+    "description": "Servicio de consultas médicas online 24/7.",
+    "features": ["24/7 medical", "Online consultations", "Multilingual", "Europe"],
+    "url": "https://doktor24.hu/en",
+    "tags": ["health", "24/7", "medical"],
+    "status": "active"
+  },
+  {
+    "id": 74,
+    "name": "PassportCard",
+    "category": "Business",
+    "description": "Seguros de viaje internacionales para viajeros frecuentes.",
+    "features": ["Travel insurance", "International", "Frequent travelers", "Coverage"],
+    "url": "https://passportcard.co.il/en",
+    "tags": ["insurance", "travel", "international"],
+    "status": "active"
+  },
+  {
+    "id": 75,
+    "name": "Satoshi's Journal",
+    "category": "Education",
+    "description": "Blog educativo y noticias sobre Bitcoin y criptomonedas.",
+    "features": ["Bitcoin education", "News", "Analysis", "Learning"],
+    "url": "https://satoshisjournal.com",
+    "tags": ["bitcoin", "education", "news"],
+    "status": "active"
+  },
+  {
+    "id": 76,
+    "name": "Hannah School",
+    "category": "Education",
+    "description": "Recursos y materiales para homeschooling internacional.",
+    "features": ["Homeschool", "International", "Curriculum", "Resources"],
+    "url": "https://hannaninternationalschool.com",
+    "tags": ["homeschool", "international", "curriculum"],
+    "status": "active"
+  },
+  {
+    "id": 77,
+    "name": "La Vid Homeschool",
+    "category": "Education",
+    "description": "Recursos gratuitos para educación en casa en español.",
+    "features": ["Spanish", "Free resources", "Homeschool", "Christian"],
+    "url": "https://lavidhomeschool.com",
+    "tags": ["homeschool", "spanish", "free"],
+    "status": "active"
+  },
+  {
+    "id": 78,
+    "name": "Therapy for Freedom",
+    "category": "Social",
+    "description": "Servicios de terapia online enfocados en libertad personal.",
+    "features": ["Online therapy", "Freedom focused", "Personal growth", "Mental health"],
+    "url": "https://therapyforfreedom.com",
+    "tags": ["therapy", "freedom", "mental health"],
+    "status": "active"
+  },
+  {
+    "id": 79,
+    "name": "Purse.io",
+    "category": "P2P",
+    "description": "Plataforma para comprar en Amazon con Bitcoin obteniendo descuentos.",
+    "features": ["Amazon shopping", "Bitcoin discounts", "P2P marketplace", "Savings"],
+    "url": "https://purse.io",
+    "tags": ["amazon", "bitcoin", "shopping"],
+    "status": "active"
+  },
+  {
+    "id": 80,
+    "name": "8333.mobi",
+    "category": "Travel",
+    "description": "Directorio móvil de tiendas y servicios que aceptan Bitcoin.",
+    "features": ["Bitcoin merchants", "Mobile friendly", "Location based", "Directory"],
+    "url": "https://8333.mobi",
+    "tags": ["merchants", "mobile", "bitcoin"],
+    "status": "active"
+  }
+]
